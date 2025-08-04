@@ -7,9 +7,6 @@
 
     int main() {
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-
      printf("Desafio do Super Trunfo!\n");
 
     // Atributo da carta A01: São Paulo
@@ -39,10 +36,6 @@
      float percapita2;
      float superpoder2;
     
-
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
      // Cadastro da carta A01: São Paulo 
         
@@ -107,9 +100,6 @@
      percapita2 = (pib2 * 1000000000.0f) / população2; 
      superpoder2 = (float)população2 + area2 + pib2 + (float)pontos2 + percapita2 + (1.0f / densidade2);
 
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
       // Exibição dos dados da carta A01: São Paulo
 
@@ -197,7 +187,7 @@
       printf("Atributo Vencedor: Renda Per Capita\n");
      }
 
-     if (superpoder1 < superpoder2)
+     if (superpoder1 > superpoder2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
@@ -205,16 +195,6 @@
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Super POder\n");
      }
-
-
-
-     // printf("População: %d\n", população1 > população2);
-     // printf("Área: %d\n", area1 > area2);
-     //printf("PIB: %d\n", pib1 > pib2);
-     //printf("Pontos Turísticos: %d\n", pontos1 > pontos2);
-     //printf("PIB Per Capita: %d\n", percapita1 > percapita2);
-     //printf("Densidade (menor vence): %d\n", densidade1 < densidade2); // Menor densidade vence
-     //printf("Super Poder: %d\n", superpoder1 > superpoder2);
 
 
     return 0;
