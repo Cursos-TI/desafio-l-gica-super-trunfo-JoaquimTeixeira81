@@ -235,7 +235,7 @@
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
      } 
-     else if(superpoder1 > superpoder2) 
+     else if(superpoder1 < superpoder2) 
      {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
