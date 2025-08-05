@@ -145,6 +145,11 @@
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: População\n");
      }
+     if (população1 == população2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: População\n");
+     }
 
      if (area1 > area2)
      {
@@ -153,7 +158,12 @@
      } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Área\n");
+     }
 
+     if (area1 == area2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Área\n");
      }
 
      if (pib1 > pib2)
@@ -163,6 +173,11 @@
      } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: PIB\n");
+     }
+     if (pib1 == pib2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: PIB\n");
      }
      
      if (pontos1 > pontos2)
@@ -182,6 +197,11 @@
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Densidade Populacional\n");
      }
+     if (densidade1 == densidade2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Densidade Populacional\n");
+     }
 
      if (percapita1 > percapita2)
      {
@@ -190,7 +210,14 @@
      } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Renda Per Capita\n");
+     } 
+     
+     if (percapita1 == percapita2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Renda Per Capita\n");
      }
+
 
      if (superpoder1 > superpoder2)
      {
@@ -199,6 +226,11 @@
      } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
+     }
+     if (superpoder1 == superpoder2) 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Super Poder\n");
      }
 
      
