@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-    int main() {
+   int main() {
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
@@ -141,75 +141,65 @@
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: População\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: População\n");
-     } 
-  
+     }
+
      if (area1 > area2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Área\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Área\n");
+
      }
 
      if (pib1 > pib2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: PIB\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: PIB\n");
      }
+     
      if (pontos1 > pontos2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Pontos Turisticos\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Ponto Turisticos\n");
      }
+
      if (densidade1 < densidade2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Densidade Populacional\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Densidade Populacional\n");
      }
+
      if (percapita1 > percapita2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Renda Per Capita\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Renda Per Capita\n");
-     } 
+     }
+
      if (superpoder1 > superpoder2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
-     } 
-     else
-     {
+     } else {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
      }
-    
 
      
     return 0;
