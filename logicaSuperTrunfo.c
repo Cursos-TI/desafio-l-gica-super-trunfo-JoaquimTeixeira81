@@ -146,66 +146,110 @@
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: População\n");
-     } else {
+     } 
+     else if (população1 < população2)
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: População\n");
+     } 
+     else {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Área\n");
      }
-
+  
      if (area1 > area2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Área\n");
-     } else {
+     } 
+     else if (area1 < area2) 
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Área\n");
-
+     }
+     else {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Área\n");
      }
 
      if (pib1 > pib2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: PIB\n");
-     } else {
+     } 
+     else if (pib1 < pib2)
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: PIB\n");
+     }
+     else
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: PIB\n");
      }
      
      if (pontos1 > pontos2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Pontos Turisticos\n");
-     } else {
+     } 
+     else if(pontos1 < pontos2) 
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Ponto Turisticos\n");
+     }
+     else
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Pontos Turisticos\n");
      }
 
      if (densidade1 < densidade2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Densidade Populacional\n");
-     } else {
+     } 
+     else if (densidade1 > densidade2) 
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Densidade Populacional\n");
+     }
+     else
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Densidade Populacional\n");
      }
 
      if (percapita1 > percapita2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Renda Per Capita\n");
-     } else {
+     } 
+     else if (percapita1 < percapita2) 
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Renda Per Capita\n");
+     } 
+     else 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Renda Per Capita\n");
      }
-
      if (superpoder1 > superpoder2)
      {
       printf("Carta 1: São Paulo Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
-     } else {
+     } 
+     else if(superpoder1 < superpoder2) 
+     {
       printf("Carta 2: Rio de Janeiro Venceu!\n");
       printf("Atributo Vencedor: Super Poder\n");
      }
-
+     else 
+     {
+      printf("Empate: Carta 1 e Carta 2\n");
+      printf("Atributo empatado: Super Poder\n");
+     }
      
     return 0;
 
