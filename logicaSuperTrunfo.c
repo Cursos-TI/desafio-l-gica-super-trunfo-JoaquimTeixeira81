@@ -38,6 +38,7 @@
      float densidade2;
      float percapita2;
      float superpoder2;
+     int escolha;
     
 
     // Cadastro das Cartas:
@@ -111,146 +112,108 @@
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-      // Exibição dos dados da carta A01: São Paulo
+      // Menu interativo
 
-     printf("O Nome do Estado: %c\n", estado1);
-     printf("O Código da Cidade: %s\n", codigo1);
-     printf("O Nome da Cidade é: %s\n", cidade1);
-     printf("A população tem: %lu\n", população1);
-     printf("A área tem: %.2f km²\n", area1);
-     printf("O PIB é: R$ %.2f bilhões\n", pib1);
-     printf("Pontos Turísticos: %d\n", pontos1);
-     printf("Densidade Populacional é: %.2f hab/km²\n", densidade1);
-     printf("Renda Per Capita é: R$ %.2f reais\n", percapita1);
-     printf("Super Poder: %.2f\n", superpoder1);
-     
+     printf("### ESCOLHA O ATRIBUTO PARA COMPARAÇÃO ###\n");
 
-     // Exibição dos dados da carta B02: Rio de Janeiro
-     
-     printf("O Nome do Estado: %c\n", estado2);
-     printf("O Código da Cidade: %s\n", codigo2);
-     printf("O Nome da Cidade é: %s\n", cidade2);
-     printf("A população tem: %lu\n", população2);
-     printf("A área tem: %.2f km²\n", area2);
-     printf("O PIB é: R$ %.2f bilhões\n", pib2);
-     printf("Pontos Turísticos: %d\n", pontos2);
-     printf("Densidade Populacional é: %.2f hab/km²\n", densidade2);
-     printf("Renda Per Capita é: R$ %.2f reais\n", percapita2);
-     printf("Super Poder: %.2f\n", superpoder2);
+     printf("1. População\n");
+     printf("2. Área\n");
+     printf("3. PIB\n");
+     printf("4. Pontos Turísticos\n");
+     printf("5. Densidade Populacional\n");
+     printf("6. Renda Per Capita\n");
+     printf("7. Super Poder\n");
+     printf("Digite a sua escolha: ");
+     scanf("%d", &escolha);
 
-     // Comparações entre as Cartas
+     // Resultado da Comparação
 
      printf("\n---Resulatdos da Comparação---\n");
 
-     if (população1 > população2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: População\n");
-     } 
-     else if (população1 < população2)
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: População\n");
-     } 
-     else {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Área\n");
-     }
-  
-     if (area1 > area2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: Área\n");
-     } 
-     else if (area1 < area2) 
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: Área\n");
-     }
-     else {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Área\n");
-     }
+     switch (escolha) {
+        case 1: // População
+            if (população1 > população2) {
+                printf("Carta 1 venceu pela maior População!\n");
+            } else if (população1 < população2) {
+                printf("Carta 2 venceu pela maior População!\n");
+            } else {
+                printf("Empate: População igual.\n");
+            }
+            break;
 
-     if (pib1 > pib2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: PIB\n");
-     } 
-     else if (pib1 < pib2)
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: PIB\n");
-     }
-     else
-     {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: PIB\n");
-     }
-     
-     if (pontos1 > pontos2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: Pontos Turisticos\n");
-     } 
-     else if(pontos1 < pontos2) 
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: Ponto Turisticos\n");
-     }
-     else
-     {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Pontos Turisticos\n");
-     }
+        case 2: // Área
+            if (area1 > area2) {
+                if ((area1 - area2) / area1 < 0.05) {
+                    printf("Empate técnico: diferença de área inferior a 5%%.\n");
+                } else {
+                    printf("Carta 1 venceu pela maior Área!\n");
+                }
+            } else if (area2 > area1) {
+                if ((area2 - area1) / area2 < 0.05) {
+                    printf("Empate técnico: diferença de área inferior a 5%%.\n");
+                } else {
+                    printf("Carta 2 venceu pela maior Área!\n");
+                }
+            } else {
+                printf("Empate: Área igual.\n");
+            }
+            break;
 
-     if (densidade1 < densidade2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: Densidade Populacional\n");
-     } 
-     else if (densidade1 > densidade2) 
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: Densidade Populacional\n");
-     }
-     else
-     {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Densidade Populacional\n");
-     }
+        case 3: // PIB
+            if (pib1 > pib2) {
+                printf("Carta 1 venceu pelo maior PIB!\n");
+            } else if (pib2 > pib1) {
+                printf("Carta 2 venceu pelo maior PIB!\n");
+            } else {
+                printf("Empate: PIB igual.\n");
+            }
+            break;
 
-     if (percapita1 > percapita2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: Renda Per Capita\n");
-     } 
-     else if (percapita1 < percapita2) 
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: Renda Per Capita\n");
-     } 
-     else 
-     {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Renda Per Capita\n");
-     }
-     if (superpoder1 > superpoder2)
-     {
-      printf("Carta 1: São Paulo Venceu!\n");
-      printf("Atributo Vencedor: Super Poder\n");
-     } 
-     else if(superpoder1 < superpoder2) 
-     {
-      printf("Carta 2: Rio de Janeiro Venceu!\n");
-      printf("Atributo Vencedor: Super Poder\n");
-     }
-     else 
-     {
-      printf("Empate: Carta 1 e Carta 2\n");
-      printf("Atributo empatado: Super Poder\n");
-     }
-     
+        case 4: // Pontos Turísticos
+            if (pontos1 > pontos2) {
+                printf("Carta 1 venceu com mais Pontos Turísticos!\n");
+            } else if (pontos2 > pontos1) {
+                printf("Carta 2 venceu com mais Pontos Turísticos!\n");
+            } else {
+                printf("Empate: mesma quantidade de Pontos Turísticos.\n");
+            }
+            break;
+
+        case 5: // Densidade (menor vence)
+            if (densidade1 < densidade2) {
+                printf("Carta 1 venceu com menor Densidade Populacional!\n");
+            } else if (densidade2 < densidade1) {
+                printf("Carta 2 venceu com menor Densidade Populacional!\n");
+            } else {
+                printf("Empate: mesma Densidade Populacional.\n");
+            }
+            break;
+
+        case 6: // Renda Per Capita
+            if (percapita1 > percapita2) {
+                printf("Carta 1 venceu com maior Renda Per Capita!\n");
+            } else if (percapita2 > percapita1) {
+                printf("Carta 2 venceu com maior Renda Per Capita!\n");
+            } else {
+                printf("Empate: mesma Renda Per Capita.\n");
+            }
+            break;
+
+        case 7: // Super Poder
+            if (superpoder1 > superpoder2) {
+                printf("Carta 1 venceu com Super Poder superior!\n");
+            } else if (superpoder2 > superpoder1) {
+                printf("Carta 2 venceu com Super Poder superior!\n");
+            } else {
+                printf("Empate: Super Poder igual.\n");
+            }
+            break;
+
+        default:
+            printf("Opção inválida. Nenhuma comparação realizada.\n");
+            break;
+
     return 0;
 
 }
+   }
