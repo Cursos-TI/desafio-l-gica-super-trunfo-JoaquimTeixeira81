@@ -72,9 +72,33 @@
 
     // Calculo da Densidade - Renda Per Capita - Super Poder
 
-     densidade1 = (float)população1 / area1;
-     percapita1 = (pib1 * 1000000000.0f) / população1; 
-     superpoder1 = (float)população1 + area1 + pib1 + (float)pontos1 + percapita1 + (1.0f / densidade1);
+    densidade1:
+
+    if (area1 != 0.0f)
+    {
+        densidade1 = (float)população1 / area1;
+    } 
+    else {
+        printf("Atenção: Área da Carta 1 é zero. Densidade definida como 0.\n"); densidade1 = 0.0f;
+     }
+     percapita1:
+
+     if (população1 != 0)
+     {
+        percapita1 = (pib1 * 1000000000.0f) / população1;
+     }
+     else {
+        printf("Atenção: População da Carta 1 é zero. PIB Per Capita definido como 0.\n"); percapita1 = 0.0f;
+     }
+     superpoder1: float inverso_densidade1 = 0.0f;  
+
+     if (densidade1 != 0.0f)
+     {
+        inverso_densidade1 = 1.0f / densidade1;
+     }
+     else {
+        printf("Atenção: Densidade da Carta 1 é zero. O inverso será 0 no Super Poder.\n");
+     } superpoder1 = (float)população1 + area1 + pib1 + (float)pontos1 + percapita1 + inverso_densidade1; 
      
      // Cadastro da carta B02: Rio de Janeiro
 
@@ -104,9 +128,31 @@
 
      // Calculo da Densidade - Renda Per Capita - Super Poder
 
-     densidade2 = (float)população2 / area2;
-     percapita2 = (pib2 * 1000000000.0f) / população2; 
-     superpoder2 = (float)população2 + area2 + pib2 + (float)pontos2 + percapita2 + (1.0f / densidade2);
+     densidade2:
+    if (area2 != 0.0f)
+    {
+        densidade2 = (float)população2 / area2;
+    } 
+    else {
+        printf("Atenção: Área da Carta 2 é zero. Densidade definida como 0.\n"); densidade2 = 0.0f;
+     }
+     percapita2:
+     if (população2 != 0)
+     {
+        percapita2 = (pib2 * 1000000000.0f) / população2;
+     }
+     else {
+        printf("Atenção: População da Carta 2 é zero. PIB Per Capita definido como 0.\n"); percapita2 = 0.0f;
+     }
+     superpoder2: float inverso_densidade2 = 0.0f;  
+     if (densidade2 != 0.0f)
+     {
+        inverso_densidade2 = 1.0f / densidade2;
+     }
+     else {
+        printf("Atenção: Densidade da Carta 2 é zero. O inverso será 0 no Super Poder.\n");
+     } superpoder2 = (float)população2 + area2 + pib2 + (float)pontos2 + percapita2 + inverso_densidade2; 
+     
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
