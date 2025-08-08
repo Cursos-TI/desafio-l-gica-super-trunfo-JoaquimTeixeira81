@@ -191,6 +191,16 @@
      printf("Renda Per Capita é: R$ %.2f reais\n", percapita2);
      printf("Super Poder: %.2f\n", superpoder2);
 
+     printf("\n--- Resultados de Comparação Direta (1=Carta 1 Venceu, 0=Carta 2 Venceu/Empate) ---\n");
+
+     printf("População: %d\n", população1 > população2);
+     printf("Área: %d\n", area1 > area2);
+     printf("PIB: %d\n", pib1 > pib2);
+     printf("Pontos Turísticos: %d/n", pontos1 > pontos2);
+     printf("Densidade Populacional: %d\n", densidade1 > densidade2); // Menor densidade vence
+     printf("Renda Per Capita: %d\n", percapita1 > percapita2 );
+     printf("Super Poder: %d\n", superpoder1 > superpoder2);
+
       // Menu interativo
 
      printf("### ESCOLHA O ATRIBUTO PARA COMPARAÇÃO ###\n");
