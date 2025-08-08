@@ -282,11 +282,11 @@
             }
             break;
 
-        default:
+         default:
             printf("Opção inválida. Nenhuma comparação realizada.\n");
 
-            break;       
- }
+            break;
+        }       
  
  return 0;
 
