@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 //Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
@@ -283,11 +284,10 @@
 
         default:
             printf("Opção inválida. Nenhuma comparação realizada.\n");
-            break;
 
-            return 0;
-            
+            break;       
  }
  
+ return 0;
 
    }
