@@ -170,18 +170,12 @@
 
         case 2: // Área
             if (area1 > area2) {
-                if ((area1 == area2)) {
-                    printf("Empate técnico.\n");
-                } else {
-                    printf("Carta 1 venceu pela maior Área!\n");
+               printf("Carta 1 venceu pela maior Área!\n");
+               } 
+            else if (area2 > area1) {
+                printf("Carta 2 venceu pela maior Área!\n");
                 }
-            } else if (area2 > area1) {
-                if ((area2 == area1)) {
-                    printf("Empate técnico.\n");
-                } else {
-                    printf("Carta 2 venceu pela maior Área!\n");
-                }
-            } else {
+            else {
                 printf("Empate: Área igual.\n");
             }
             break;
@@ -240,7 +234,9 @@
             printf("Opção inválida. Nenhuma comparação realizada.\n");
             break;
 
-    return 0;
+            return 0;
+            
+ }
+ 
 
-}
    }
