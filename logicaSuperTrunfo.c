@@ -222,73 +222,87 @@
      switch (escolha) {
         case 1: // População
             if (população1 > população2) {
-                printf("Carta 1 venceu pela maior População!\n");
-            } else if (população1 < população2) {
-                printf("Carta 2 venceu pela maior População!\n");
+                printf("Carta 1: São Paulo Venceu!\n");
+                printf("Atributo Vencedor: População\n");
+            } else if (população1 == população2) {
+                printf("Empate na População!\n");
             } else {
-                printf("Empate: População igual.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: População!\n");
             }
             break;
 
         case 2: // Área
             if (area1 > area2) {
-               printf("Carta 1 venceu pela maior Área!\n");
+               printf("Carta 1: São Paulo Venceu!\n");
+               printf("Atributo Vencedor: Área\n");
                } 
-            else if (area2 > area1) {
-                printf("Carta 2 venceu pela maior Área!\n");
+            else if (area2 == area1) {
+                printf("Empate na População!\n");
                 }
             else {
-                printf("Empate: Área igual.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: Área!\n");
             }
             break;
 
         case 3: // PIB
             if (pib1 > pib2) {
-                printf("Carta 1 venceu pelo maior PIB!\n");
-            } else if (pib2 > pib1) {
-                printf("Carta 2 venceu pelo maior PIB!\n");
+                 printf("Carta 1: São Paulo Venceu!\n");
+                 printf("Atributo Vencedor: Pib\n");
+            } else if (pib2 == pib1) {
+                printf("Empate no PIB!\n");
             } else {
-                printf("Empate: PIB igual.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: PIB!\n");
             }
             break;
 
         case 4: // Pontos Turísticos
             if (pontos1 > pontos2) {
-                printf("Carta 1 venceu com mais Pontos Turísticos!\n");
-            } else if (pontos2 > pontos1) {
-                printf("Carta 2 venceu com mais Pontos Turísticos!\n");
+                printf("Carta 1: São Paulo Venceu!\n");
+                printf("Atributo Vencedor: Pontos Turísticos\n");
+            } else if (pontos2 == pontos1) {
+                printf("Empate no Ponto Turísticos!\n");
             } else {
-                printf("Empate: mesma quantidade de Pontos Turísticos.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: Pontos Turísticos!\n");
             }
             break;
 
         case 5: // Densidade (menor vence)
             if (densidade1 < densidade2) {
-                printf("Carta 1 venceu com menor Densidade Populacional!\n");
-            } else if (densidade2 < densidade1) {
-                printf("Carta 2 venceu com menor Densidade Populacional!\n");
+                printf("Carta 1: São Paulo Venceu!\n");
+                printf("Atributo Vencedor: Densidade\n");
+            } else if (densidade2 == densidade1) {
+                printf("Empate na Densidade!\n");
             } else {
-                printf("Empate: mesma Densidade Populacional.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: Densidade!\n");
             }
             break;
 
         case 6: // Renda Per Capita
             if (percapita1 > percapita2) {
-                printf("Carta 1 venceu com maior Renda Per Capita!\n");
-            } else if (percapita2 > percapita1) {
-                printf("Carta 2 venceu com maior Renda Per Capita!\n");
+                printf("Carta 1: São Paulo Venceu!\n");
+                printf("Atributo Vencedor: Renda Per Capita\n");
+            } else if (percapita2 == percapita1) {
+                printf("Empate na Renda Per Capita!\n");
             } else {
-                printf("Empate: mesma Renda Per Capita.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: Renda Per Capita!\n");
             }
             break;
 
         case 7: // Super Poder
             if (superpoder1 > superpoder2) {
-                printf("Carta 1 venceu com Super Poder superior!\n");
-            } else if (superpoder2 > superpoder1) {
-                printf("Carta 2 venceu com Super Poder superior!\n");
+               printf("Carta 1: São Paulo Venceu!\n");
+               printf("Atributo Vencedor: Super Poder\n");
+            } else if (superpoder2 == superpoder1) {
+                printf("Empate no Super Poder!\n");
             } else {
-                printf("Empate: Super Poder igual.\n");
+                printf("Carta 2: Rio de Janeiro Venceu!\n");
+                printf("Atributo Vencedor: Super Poder!\n");
             }
             break;
 
