@@ -53,7 +53,7 @@
      scanf(" %c", &estado1);
 
      printf("Digite o Codigo: ");
-     scanf("%s", codigo1);
+     scanf("%19s", codigo1);
 
      printf("Digite o Nome da Cidade: ");
      scanf(" %49[^\n]", cidade1);
@@ -85,7 +85,7 @@
      scanf(" %c", &estado2);
 
      printf("Digite o Codigo: ");
-     scanf("%s", codigo2);
+     scanf("%19s", codigo2);
 
      printf("Digite o Nome da Cidade: ");
      scanf(" %49[^\n]", cidade2);
@@ -111,6 +111,33 @@
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+    // Exibição dos dados da carta A01: São Paulo
+
+     printf("O Nome do Estado: %c\n", estado1);
+     printf("O Código da Cidade: %s\n", codigo1);
+     printf("O Nome da Cidade é: %s\n", cidade1);
+     printf("A população tem: %lu\n", população1);
+     printf("A área tem: %.2f km²\n", area1);
+     printf("O PIB é: R$ %.2f bilhões\n", pib1);
+     printf("Pontos Turísticos: %d\n", pontos1);
+     printf("Densidade Populacional é: %.2f hab/km²\n", densidade1);
+     printf("Renda Per Capita é: R$ %.2f reais\n", percapita1);
+     printf("Super Poder: %.2f\n", superpoder1);
+     
+
+     // Exibição dos dados da carta B02: Rio de Janeiro
+     
+     printf("O Nome do Estado: %c\n", estado2);
+     printf("O Código da Cidade: %s\n", codigo2);
+     printf("O Nome da Cidade é: %s\n", cidade2);
+     printf("A população tem: %lu\n", população2);
+     printf("A área tem: %.2f km²\n", area2);
+     printf("O PIB é: R$ %.2f bilhões\n", pib2);
+     printf("Pontos Turísticos: %d\n", pontos2);
+     printf("Densidade Populacional é: %.2f hab/km²\n", densidade2);
+     printf("Renda Per Capita é: R$ %.2f reais\n", percapita2);
+     printf("Super Poder: %.2f\n", superpoder2);
 
       // Menu interativo
 
@@ -143,14 +170,14 @@
 
         case 2: // Área
             if (area1 > area2) {
-                if ((area1 - area2) / area1 < 0.05) {
-                    printf("Empate técnico: diferença de área inferior a 5%%.\n");
+                if ((area1 == area2)) {
+                    printf("Empate técnico.\n");
                 } else {
                     printf("Carta 1 venceu pela maior Área!\n");
                 }
             } else if (area2 > area1) {
-                if ((area2 - area1) / area2 < 0.05) {
-                    printf("Empate técnico: diferença de área inferior a 5%%.\n");
+                if ((area2 == area1)) {
+                    printf("Empate técnico.\n");
                 } else {
                     printf("Carta 2 venceu pela maior Área!\n");
                 }
