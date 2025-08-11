@@ -52,7 +52,7 @@
      float densidade1;
      float percapita1; 
      float superpoder1;
-     int escolha1;
+    
           
      // Atributos da carta B02: Rio de Janeiro
      
@@ -66,6 +66,7 @@
      float densidade2;
      float percapita2;
      float superpoder2;
+     int escolha1;
      int escolha2;
      int resultado1 = compararArtributo(escolha1, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);  
      int resultado2 = compararArtributo(escolha2, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);
@@ -262,93 +263,6 @@
      printf("7. Super Poder\n");
      printf("Digite a sua escolha: ");
      scanf("%d", &escolha2); 
-
-     if (escolha2 < 1 || escolha2 > 7 || escolha2 == escolha1) 
-     {
-        printf("Opção inválida ou Igual ao primeiro tributo. Encerrando. \n");
-
-        return 1;
-     }
-     
-
-     for (int i = 1; i <= 7 ; i++)
-     {
-        if (i != escolha1) continue;
-        {
-            switch (i)
-            {
-             case 1: 
-             printf("1. População\n");
-             break;
-             case 2:
-             printf("2. Área\n");
-             break;
-             case 3:
-             printf("3. PIB\n");
-             break;
-             case 4: 
-             printf("4. Pontos Turísticos\n");
-             break;
-             case 5:
-             printf("5. Densidade Populacional\n");
-             break;
-             case 6: 
-             printf("6. Renda Per Capita\n");
-             break;
-             case 7:
-             printf("7. Super Poder\n");
-             break;
-            }
-        }
-    }
-
-        printf("Digite ");
-        scanf("%d", &escolha2);
-
-        // Função para pegar valor do atributo
-
-        float valorCarta1[8] = {0, populacao1, area1, pib1, pontos1, densidade1, percapita1, superpoder1};
-        float valorCarta2[8] = {0, populacao2, area2, pib2, pontos2, densidade2, percapita2, superpoder2};    
-
-        // Comparação dos Tributos
-
-        float soma1 = 0, soma2 = 0;
-        int atributos[2] = {escolha1, escolha2};
-
-     // Resultado da Comparação
-
-     printf("\n---Resulatdos da Comparação---\n");
-
-     for (int i = 0; i < 2; i++)
-     {
-        int atr = atributos[i];
-        printf("\Atributos %d:", atr);
-     }
-     switch (atr)
-     {
-     case 1: 
-     printf("1. População\n");
-     break;
-     case 2:
-     printf("2. Área\n");
-     break;
-     case 3:
-     printf("3. PIB\n");
-     break;
-     case 4: 
-     printf("4. Pontos Turísticos\n");
-     break;
-     case 5:
-     printf("5. Densidade Populacional\n");
-     break;
-     case 6: 
-     printf("6. Renda Per Capita\n");
-     break;
-     case 7:
-     printf("7. Super Poder\n");
-     break;
-             
-     }
     
      switch () {
         case 1: // População
