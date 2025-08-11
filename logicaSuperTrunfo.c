@@ -39,7 +39,8 @@
      float densidade2;
      float percapita2;
      float superpoder2;
-     int escolha;
+     int escolha1;
+     int escolha2;
     
 
     // Cadastro das Cartas:
