@@ -61,15 +61,19 @@
      
      printf("Digite a População: ");
      scanf("%lu", &população1);
+     getchar();
 
      printf("Digite a Area: ");
      scanf(" %f", &area1);
+     getchar();
 
      printf("Digite o pib: ");
      scanf(" %f", &pib1);
+     getchar();
 
      printf("Digite o numero de Pontos Turisticos: ");
      scanf("%d", &pontos1);
+     getchar();
 
     // Calculo da Densidade - Renda Per Capita - Super Poder
 
@@ -119,15 +123,19 @@
      
      printf("Digite a População: ");
      scanf("%lu", &população2);
+     getchar();
 
      printf("Digite a Area: ");
      scanf(" %f", &area2);
+     getchar();
 
      printf("Digite o pib: ");
      scanf(" %f", &pib2);
+     getchar();
 
      printf("Digite o numero de Pontos Turisticos: ");
      scanf("%d", &pontos2);
+     getchar();
 
      // Calculo da Densidade - Renda Per Capita - Super Poder
 
