@@ -1,37 +1,57 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+ void exibirMenu(int escolhaJaFeita) {
+ printf("\n### ESCOLHA UM ATRIBUTO ###\n");
+ if (escolhaJaFeita !=1)
+    printf("1. População\n");
+ if (escolhaJaFeita !=2)
+   printf("2. Área\n");
+ if (escolhaJaFeita !=3)
+   printf("3. PIB\n");
+ if (escolhaJaFeita !=4)
+   printf("4. Pontos Turísticos\n");
+ if (escolhaJaFeita !=5)
+   printf("5. Densidade Populacinal\n");
+ if (escolhaJaFeita !=6)
+   printf("6. Renda Per Capita\n");
+ if (escolhaJaFeita !=7)
+   printf("Super Poder\n");
+
+   printf("Digite a sua Escolha: ");
+
+ }
+
+ float obterValorAtributo(int escolha, unsigned long int pop, float area, float pib, int pontos, float dens, float percapita, float super) {
+
+    switch (escolha)
+    {
+    case 1:
+    return (float) pop;
+    case 2:
+    return area;
+    case 3:
+    return pib;
+    case 4:
+    return (float) pontos;
+    case 5:
+    return dens;
+    case 6:
+    return percapita;
+    case 7:
+    return super;
+       
+    default: return 0.0f;
+
+        break;
+    }
+ }
+
 //Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
 // Siga os comentários para implementar cada parte do desafio.
 
-
-   int compararArtributo(int tipoAtributo, unsigned long p1, unsigned long p2, float a1,
-   float a2, float pib1, float pib2, int pts1, int pts2, float d1, float d2, float pc1, float pc2, float sp1,
-   float sp2) {
-   switch (tipoAtributo)
-   {
-   case 1:
-    return (p1 > p2) ? 1 : (p1 == p2 ? 0 : 2); // população    
-   case 2: 
-    return (a1 > a2) ? 1 : (a1 == a2 ? 0 : 2); // Área
-   case 3: 
-   return (pib1 > pib2) ? 1 : (pib1 == pib2 ? 0 : 2); // PIB
-   case 4: 
-   return (pts1 > pts2) ? 1 : (pts1 == pts2 ? 0 : 2); // Pontos Turisticos
-   case 5:
-   return (d1 < d2) ? 1 : (d1 == d2 ? 0 : 2); // Densidade (menor vence)
-   case 6:
-   return (pc1 > pc2) ? 1 : (pc1 == pc2 ? 0 : 2); // Renda Per Capita
-   case 7: 
-   return (sp1 > sp2) ? 1 : (sp1 == sp2 ? 0 : 2); // Super Poder
-   
-   }
-
-   return -1; // Erro
-
-   } 
 
    int main() {
 
@@ -46,8 +66,8 @@
      char codigo1[20];
      char cidade1[50];
      unsigned long int populacao1;         // Em milhões de habitantes
-     float area1;           // Em Km quadrados
-     float pib1;           // Em bilhões de Reais
+     float area1;                         // Em Km quadrados
+     float pib1;                         // Em bilhões de Reais
      int pontos1;
      float densidade1;
      float percapita1; 
@@ -60,16 +80,16 @@
      char codigo2[20];
      char cidade2[50];
      unsigned long int populacao2;         // Em milhões de habitantes
-     float area2;           // Em Km quadrados
-     float pib2;           // Em bilhões de Reais
+     float area2;                         // Em Km quadrados
+     float pib2;                         // Em bilhões de Reais
      int pontos2;
      float densidade2;
      float percapita2;
      float superpoder2;
      int escolha1;
      int escolha2;
-     int resultado1 = compararArtributo(escolha1, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);  
-     int resultado2 = compararArtributo(escolha2, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);
+     // int resultado1 = compararArtributo(escolha1, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);  
+     // int resultado2 = compararArtributo(escolha2, populacao1, populacao2, area1, area2, pib1,pib2, pontos1, pontos2, densidade1, densidade2, percapita1, percapita2, superpoder1, superpoder2);
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -203,6 +223,8 @@
 
     // Exibição dos dados da carta A01: São Paulo
 
+    printf("\n --- Carta 1 ---\n");
+
      printf("O Nome do Estado: %c\n", estado1);
      printf("O Código da Cidade: %s\n", codigo1);
      printf("O Nome da Cidade é: %s\n", cidade1);
@@ -216,6 +238,8 @@
      
 
      // Exibição dos dados da carta B02: Rio de Janeiro
+
+     printf("\n--- Carta 2 ---\n");
      
      printf("O Nome do Estado: %c\n", estado2);
      printf("O Código da Cidade: %s\n", codigo2);
