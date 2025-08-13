@@ -17,7 +17,7 @@
  if (escolhaJaFeita !=6)
    printf("6. Renda Per Capita\n");
  if (escolhaJaFeita !=7)
-   printf("Super Poder\n");
+   printf("7. Super Poder\n");
 
    printf("Digite a sua Escolha: ");
 
