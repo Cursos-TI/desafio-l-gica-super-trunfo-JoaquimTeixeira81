@@ -319,51 +319,34 @@ const char* nomeAtributo(int escolha1) {
     float soma_c2 = valor1_c2 + valor2_c2;
 
     // Resultado final detalhado
-    printf("\n=== RESULTADO FINAL ===\n");
-    printf("%s -> [%s: %.2f | %s: %.2f] Soma: %.2f\n",
+     printf("\n=== RESULTADO FINAL DA RODADA ===\n");
+     printf("%s -> [%s: %.2f | %s: %.2f] Soma: %.2f\n",
            cidade1, nomeAtributo(escolha1), valor1_c1,
            nomeAtributo(escolha2), valor2_c1, soma_c1);
 
-    printf("%s -> [%s: %.2f | %s: %.2f] Soma: %.2f\n",
+     printf("%s -> [%s: %.2f | %s: %.2f] Soma: %.2f\n",
            cidade2, nomeAtributo(escolha1), valor1_c2,
            nomeAtributo(escolha2), valor2_c2, soma_c2);
+        
+    if (pontos_c1 == 2) {
+        printf("\n🏆 Vencedor da Rodada: %s\n", cidade1);
+    }
+    else if (pontos_c2 == 2) {
+        printf("\n🏆 Vencedor da Rodada: %s\n", cidade2);
 
-    if (soma_c1 > soma_c2)
-        printf("\n🏆 Vencedor: %s\n", cidade1);
-    else if (soma_c2 > soma_c1)
-        printf("\n🏆 Vencedor: %s\n", cidade2);
+    }
     else
-        printf("\n🤝 Empate!\n");
+        printf("\n🤝 Empate na Rodada!\n");
 
 
+     // if (soma_c1 > soma_c2)
+       // printf("\n🏆 Vencedor: %s\n", cidade1);
+     // else if (soma_c2 > soma_c1)
+      // printf("\n🏆 Vencedor: %s\n", cidade2);
+     // else
+      // printf("\n🤝 Empate!\n");
 
-      // Menu interativo
-
-     printf("### ESCOLHA O ATRIBUTO 1 PARA COMPARAÇÃO ###\n");
-
-     printf("1. População\n");
-     printf("2. Área\n");
-     printf("3. PIB\n");
-     printf("4. Pontos Turísticos\n");
-     printf("5. Densidade Populacional\n");
-     printf("6. Renda Per Capita\n");
-     printf("7. Super Poder\n");
-     printf("Digite a sua escolha: ");
-     scanf("%d", &escolha1);
-
-    printf("### ESCOLHA O ATRIBUTO 2 PARA COMPARAÇÃO (Diferente do Primeiro) ###\n");
-
-     printf("1. População\n");
-     printf("2. Área\n");
-     printf("3. PIB\n");
-     printf("4. Pontos Turísticos\n");
-     printf("5. Densidade Populacional\n");
-     printf("6. Renda Per Capita\n");
-     printf("7. Super Poder\n");
-     printf("Digite a sua escolha: ");
-     scanf("%d", &escolha2); 
-    
- 
+  
  return 0;
 
     }
